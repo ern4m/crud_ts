@@ -1,10 +1,11 @@
-import { Request, Response, Application } from "express";
-import express = require('express');
+import express, { Express, Request, Response, Application } from "express";
 
-var app: Application = express()
+var app: Express = express()
 
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello, world')
 });
 
-app.listen(3000, () => ("listening on 3000"));
+app.listen(3000, () => {
+    console.log("listening on 3000")
+});
